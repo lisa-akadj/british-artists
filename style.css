@@ -1,0 +1,231 @@
+body {
+  background: #F5EBDD;
+  font-family: Georgia, serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                 /* pushes the footer to the bottom */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 24px 300px;
+}
+
+.site-header {
+  display: flex;
+  align-items: stretch;    /* buttons fill the full height of the bar */
+  flex-wrap: wrap;         /* lets nav drop below on small screens */
+  gap: 24px;
+  min-height: 60px;        /* height of the blue bar */
+  padding: 0 200px;        /* no top/bottom padding, so buttons reach the edges */
+  background: #315B8C;
+  color: white;
+  border-bottom: 8px solid #413333;   /* brown strip under the blue */
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1rem;
+  align-self: center;      /* keeps the title vertically centred */
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;     /* centres the text inside the full-height button */
+  padding: 0 16px;
+  background: #315B8C;
+  color: white;
+  text-decoration: none;   /* removes the underline */
+}
+
+.nav-btn.index {
+  margin-left: auto;       /* pushes Home page to the right */
+}
+
+.nav-btn:hover {
+  background: #F2765E;
+}
+
+/* =========================================
+   Artist bar (name + Biography / Artworks)
+   ========================================= */
+.artist-links {
+  display: flex;
+  align-items: stretch;    /* buttons fill the full height of the bar */
+  flex-wrap: wrap;
+  gap: 24px;
+  min-height: 64px;        /* fixed band height, the same on every page */
+  box-sizing: border-box;
+  padding: 0 300px;        /* same sides as .container so the name lines up */
+  background: #413333;
+  color: white;
+}
+
+.artist-links h1 {
+  margin: 0;
+  align-self: center;      /* keeps the artist name vertically centred */
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;     /* centres the text inside the full-height button */
+  padding: 0 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.secondary-btn:hover {
+  background: #F2765E;
+}
+
+/* =========================================
+   Active button (current page)
+   Kept after the :hover rules so it stays
+   this colour when hovered.
+   ========================================= */
+.nav-btn.active,
+.secondary-btn.active {
+  background: #F5EBDD;
+}
+
+.nav-btn.active {
+  color: #315B8C;          /* matches the header so it's readable */
+}
+
+.secondary-btn.active {
+  color: #413333;          /* matches the artist bar */
+}
+
+/* =========================================
+   Artist page: portrait left, biography right
+   ========================================= */
+.artist-main {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.artist-portrait {
+  margin: 0;
+  flex: 0 0 auto;          /* keeps the image at its HTML size */
+}
+
+.artist-portrait img {
+  display: block;
+  border-radius: 6px;
+}
+
+.artist-bio {
+  flex: 1;
+}
+
+.artist-bio h3 {
+  margin-top: 0;           /* lines the heading up with the top of the photo */
+}
+
+/* =========================================
+   Home page: photo pyramid left, text right
+   ========================================= */
+.intro {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.photos {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+}
+
+.photos figure {
+  margin: 0;
+  width: min-content;      /* caption wraps to the image width */
+}
+
+.photos figure:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.photos img {
+  display: block;
+  border-radius: 6px;
+}
+
+.photos figcaption {
+  padding-top: 6px;
+  text-align: center;
+  /* font-style: italic; */
+  font-size: 0.7rem;
+}
+
+.text {
+  flex: 1;
+}
+
+.text p {
+  margin-top: 0;
+}
+
+/* =========================================
+   Artworks page: framed prints, four per row
+   ========================================= */
+.page-heading {
+  margin-top: 0;
+  text-align: center
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 equal frames per row */
+  gap: 32px;
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 16px;                             /* white mount around the artwork */
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* soft shadow, like a hung print */
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 260px;           /* every frame the same height */
+  object-fit: contain;     /* fits the whole artwork in the frame, no cropping */
+}
+
+.gallery figcaption {
+  contain: inline-size;    /* caption wraps to the photo's width instead of widening it */
+  padding-top: 6px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+.site-footer {
+  text-align: center;
+  padding: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #413333;
+  font-size: 0.85rem;
+}
