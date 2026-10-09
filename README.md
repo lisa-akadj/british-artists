@@ -1,5 +1,4 @@
 # british-artists
-Short biographical web pages on three British artists built with HTML and CSS.
 
 Hello, welcome to the first web page I built from scratch! 
 
