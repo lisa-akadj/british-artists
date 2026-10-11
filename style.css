@@ -51,7 +51,8 @@ nav {
 }
 
 .nav-btn.index {
-  margin-left: auto;       /* pushes Home page to the right */
+  margin-left: auto;
+  background: #F2765E;       /* pushes Home page to the right */
 }
 
 .nav-btn:hover {
@@ -59,7 +60,7 @@ nav {
 }
 
 /* =========================================
-   Artist bar (name + Biography / Artworks)
+  Artist bar (name + Biography / Artworks)
    ========================================= */
 .artist-links {
   display: flex;
@@ -91,9 +92,9 @@ nav {
 }
 
 /* =========================================
-   Active button (current page)
-   Kept after the :hover rules so it stays
-   this colour when hovered.
+  Active button (current page)
+  Kept after the :hover rules so it stays
+  this colour when hovered.
    ========================================= */
 .nav-btn.active,
 .secondary-btn.active {
@@ -109,7 +110,7 @@ nav {
 }
 
 /* =========================================
-   Artist page: portrait left, biography right
+  Artist page: portrait left, biography right
    ========================================= */
 .artist-main {
   display: flex;
@@ -136,7 +137,7 @@ nav {
 }
 
 /* =========================================
-   Home page: photo pyramid left, text right
+  Home page: photo pyramid left, text right
    ========================================= */
 .intro {
   display: flex;
@@ -182,7 +183,7 @@ nav {
 }
 
 /* =========================================
-   Artworks page: framed prints, four per row
+  Artworks page: framed prints, four per row
    ========================================= */
 .page-heading {
   margin-top: 0;
@@ -217,7 +218,7 @@ nav {
 }
 
 /* =========================================
-   Footer
+  Footer
    ========================================= */
 .site-footer {
   text-align: center;
